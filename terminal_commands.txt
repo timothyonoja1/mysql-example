@@ -1,0 +1,35 @@
+
+cd /Users/timothyonoja/Desktop/nest/mysql-example
+npm run start
+
+npm i --save csurf
+npm i --save @nestjs/throttler
+
+enable versionsing and other middlewares in main.ts
+add RateLimiting to app.module.ts
+
+npm i --save @nestjs/config
+npm install --save @nestjs/typeorm typeorm mysql2
+npm install ts-node --save-dev
+
+// Add typeorm command under scripts section in package.json
+"typeorm": "typeorm-ts-node-commonjs"
+
+npm i @nestjs/mongoose mongoose
+
+nest g resource [name]s
+
+// Authentication and authorization
+npm install bcrypt
+npm install --save @nestjs/jwt
+
+npm install --save @nestjs/swagger
+
+nest g module auth
+nest g controller auth
+
+curl -X POST http://localhost:3000/api/auth/register -d '{"username": "Timothy", "password": "changeme", "confirmPassword": "changeme"}' -H "Content-Type: application/json"
+
+curl -X POST http://localhost:3000/api/auth/login -d '{"username": "Timothy", "password": "changeme"}' -H "Content-Type: application/json"
+
+curl http://localhost:3000/api/cats -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwOTA0MTA0MiwiZXhwIjoxNzA5MDQxMTYyfQ.9VTdLpa-nHR0jJGp_vGBYUXcw93AGrOpnieta-JtbVg"
